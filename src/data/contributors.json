@@ -39,7 +39,18 @@
     "id": "utm",
     "name": "Universiti Teknologi Malaysia",
     "shortName": "UTM",
-    "contributors": []
+    "integration": {
+      "exists": true,
+      "name": "Student Portal",
+      "url": "/institution/utm"
+    },
+    "contributors": [
+      {
+        "name": "Arif Emrullah",
+        "github": "eemrull",
+        "avatar": "https://github.com/eemrull.png"
+      }
+    ]
   },
   {
     "id": "uitm",
@@ -266,7 +277,14 @@
     "id": "apu",
     "name": "Asia Pacific University of Technology & Innovation",
     "shortName": "APU",
-    "contributors": []
+    "contributors": [
+      {
+        "name": "Toh Xin Yi",
+        "github": "xinyitohh",
+        "role": "author",
+        "avatar": "https://avatars.githubusercontent.com/xinyitohh"
+      }
+    ]
   },
   {
     "id": "tar-umt",
@@ -291,5 +309,23 @@
     "name": "University of Reading Malaysia",
     "shortName": "Reading",
     "contributors": []
+  },
+  {
+    "id": "unikl",
+    "name": "Universiti Kuala Lumpur",
+    "shortName": "UniKL",
+    "integration": {
+      "exists": true,
+      "name": "ECITIE",
+      "url": "/institution/unikl"
+    },
+    "contributors": [
+      {
+        "name": "ipan",
+        "github": "IrfanNG",
+        "role": "Author",
+        "avatar": "https://avatars.githubusercontent.com/IrfanNG"
+      }
+    ]
   }
 ]

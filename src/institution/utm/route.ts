@@ -1,16 +1,16 @@
 import { Hono } from "hono";
 import { z } from "zod";
-import { UiTMScraper } from "./scraper";
+import { UTMScraper } from "./scraper";
 import { success, fail } from "../../utils/response";
 
-const uitmRoute = new Hono();
+const utmRoute = new Hono();
 
 const loginSchema = z.object({
   studentId: z.string().min(1, "Student ID is required"),
-  password: z.string().optional(),
+  password: z.string().min(1, "Password is required"),
 });
 
-uitmRoute.post("/", async (c) => {
+utmRoute.post("/", async (c) => {
   try {
     const body = await c.req.json();
     const result = loginSchema.safeParse(body);
@@ -26,10 +26,10 @@ uitmRoute.post("/", async (c) => {
     }
 
     const { studentId, password } = result.data;
-    const scraper = new UiTMScraper();
+    const scraper = new UTMScraper();
 
     try {
-      const calendars = await scraper.scrape(studentId, password as string);
+      const calendars = await scraper.scrape(studentId, password);
       return success(c, { calendars });
     } catch (error: any) {
       if (error.message.includes("Login failed")) {
@@ -42,4 +42,4 @@ uitmRoute.post("/", async (c) => {
   }
 });
 
-export { uitmRoute };
+export { utmRoute };
