@@ -2,6 +2,7 @@ import { Hono } from "hono";
 import { iiumRoute } from "./institution/iium/route";
 import { iicRoute } from "./institution/iic/route";
 import { uitmRoute } from "./institution/uitm/route";
+import { upmRoute } from "./institution/upm/route";
 import { contributorsRoute } from "./routes/contributors/route";
 
 const app = new Hono();
@@ -9,6 +10,7 @@ const app = new Hono();
 app.route("/institution/iium", iiumRoute);
 app.route("/institution/iic", iicRoute);
 app.route("/institution/uitm", uitmRoute);
+app.route("/institution/upm", upmRoute);
 app.route("/contributors", contributorsRoute);
 
 app.get("/", (c) => {

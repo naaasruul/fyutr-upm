@@ -21,7 +21,19 @@
     "id": "upm",
     "name": "Universiti Putra Malaysia",
     "shortName": "UPM",
-    "contributors": []
+    "integration": {
+      "exists": true,
+      "name": "e-SMP",
+      "url": "/institution/upm"
+    },
+    "contributors": [
+      {
+        "name": "Nasrul",
+        "github": "naaasruul",
+        "role": "Author",
+        "avatar": "https://avatars.githubusercontent.com/naaasruul"
+      }
+    ]
   },
   {
     "id": "utm",
